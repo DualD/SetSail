@@ -18,10 +18,10 @@
             <TextBlock Canvas.Left="111" TextWrapping="Wrap" Text="Coming Soon!" Canvas.Top="154" FontSize="25"/>
         </Canvas>
         <TextBox HorizontalAlignment="Left" Margin="10,249,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="102" Width="370" Background="Transparent" BorderBrush="#FF703838"/>
-        <ComboBox x:Name="LocationBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="204" Margin="96,126,0,0" PlaceholderText="Choose Location" SelectionChanged="ComboBox_SelectionChanged" Height="57">
+        <ComboBox x:Name="LocationBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="204" Margin="96,126,0,0" PlaceholderText="Choose Location" Height="57">
             <ComboBox HorizontalAlignment="Left" Width="194" Height="40"/>
         </ComboBox>
-        <ComboBox x:Name="ParametreBox" HorizontalAlignment="Left" Margin="96,182,0,0" VerticalAlignment="Top" Width="204" PlaceholderText="Choose a parametre" SelectionChanged="ParametreBox_SelectionChanged"/>
+        <ComboBox x:Name="ParametreBox" HorizontalAlignment="Left" Margin="96,182,0,0" VerticalAlignment="Top" Width="204" PlaceholderText="Choose a parametre"/>
 
     </Grid>
 </Page>
