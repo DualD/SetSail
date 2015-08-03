@@ -44,5 +44,47 @@ namespace SetSail
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
         }
+
+        private void WeatherButton_Click(object sender, RoutedEventArgs e)
+        {
+            WeatherCanvas.Visibility=Visibility.Visible;
+            SeaCanvas.Visibility=Visibility.Collapsed;
+            CourseCanvas.Visibility=Visibility.Collapsed;
+        }
+
+        private void SeaButton_Click(object sender, RoutedEventArgs e)
+        {
+            WeatherCanvas.Visibility = Visibility.Collapsed;
+            SeaCanvas.Visibility = Visibility.Visible;
+            CourseCanvas.Visibility = Visibility.Collapsed;
+        }
+
+        private void CourseButton_Click(object sender, RoutedEventArgs e)
+        {
+            WeatherCanvas.Visibility = Visibility.Collapsed;
+            SeaCanvas.Visibility = Visibility.Collapsed;
+            CourseCanvas.Visibility = Visibility.Visible;
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            List<String> Locations = new List<string>();
+
+            Locations.Add("Kattegat");
+            Locations.Add("Sjælland");
+            Locations.Add("Fyn");
+            Locations.Add("Jylland");
+        }
+
+        private void ParametreBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            List<String> Parametres = new List<string>();
+
+            Parametres.Add("Strøm");
+            Parametres.Add("Vandstand");
+            Parametres.Add("Bølgehøjde");
+        }
+
+        
     }
 }
