@@ -22,9 +22,25 @@ namespace SetSail
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        List<String> Locations = new List<string>();
+        List<String> Parametres = new List<string>();
+
+            
         public MainPage()
         {
             this.InitializeComponent();
+
+            Locations.Add("Kattegat");
+            Locations.Add("Sjælland");
+            Locations.Add("Fyn");
+            Locations.Add("Jylland");
+
+            Parametres.Add("Strøm");
+            Parametres.Add("Vandstand");
+            Parametres.Add("Bølgehøjde");
+
+            LocationBox.ItemsSource = Locations;
+            ParametreBox.ItemsSource = Parametres;
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
         }
@@ -45,6 +61,7 @@ namespace SetSail
             // this event is handled for you.
         }
 
+         
         private void WeatherButton_Click(object sender, RoutedEventArgs e)
         {
             WeatherCanvas.Visibility=Visibility.Visible;
@@ -66,24 +83,9 @@ namespace SetSail
             CourseCanvas.Visibility = Visibility.Visible;
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            List<String> Locations = new List<string>();
-
-            Locations.Add("Kattegat");
-            Locations.Add("Sjælland");
-            Locations.Add("Fyn");
-            Locations.Add("Jylland");
-        }
-
-        private void ParametreBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            List<String> Parametres = new List<string>();
-
-            Parametres.Add("Strøm");
-            Parametres.Add("Vandstand");
-            Parametres.Add("Bølgehøjde");
-        }
+        
+           
+        
 
         
     }
